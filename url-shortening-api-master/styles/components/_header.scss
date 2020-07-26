@@ -1,0 +1,218 @@
+.header {
+    padding: 3rem 0rem;
+
+    &__nav {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;    
+
+        @include tablet {
+            display:none;
+            position: absolute;
+            background: $primaryTwo;
+            flex-flow: column;
+            top: 6.5rem;
+            width: 80%;
+            left: 200%;
+            transform: translateX(-50%);
+            z-index: 10;
+            border-radius: 0.4rem;
+            padding: 2rem;
+        }
+
+        &--open {
+            display: flex;
+        }
+
+        &--slide-in {
+            animation-name: slideIn;
+            animation-duration: 0.2s;
+            animation-fill-mode: forwards;
+        }
+
+        &--slide-out {
+            animation-name: slideOut;
+            animation-duration: 0.2s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &__logo{
+        width: 8rem;
+        &-container {
+            margin-right: 3rem;
+            align-items: center;
+            display: flex;
+        }
+    }
+
+
+    &__nav-links {
+        display:flex;
+        flex: 2;
+
+        @include tablet {
+            flex-flow: column;
+            align-items: center;
+        }
+
+        &__item {
+            margin-right: 2rem;
+        
+            @include tablet {
+                margin-bottom: 2rem;
+                margin-right: 0;
+            }
+        }
+
+        &__link {
+            font-weight: bold;
+            
+            @include tablet {
+                color: white;
+            }
+        }
+    }
+
+
+
+    &__nav-account {
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1;
+
+
+        @include  tablet {
+            flex-flow: column;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px $neutralOne solid;
+            width: 100%;
+        }
+        
+        a {
+            font-weight: bold;
+            @include tablet {
+                color: white;
+            }
+        }
+
+        a:first-of-type {
+            margin-right: 3rem;
+        
+            @include tablet {
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+        }
+
+        &__button {
+            
+            @include phone {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+    }
+
+    &__menu-button {
+        display: none;
+        width: 32px;
+        height: 32px;
+
+        button {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
+        @include tablet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            
+            button {
+                border:none;
+                background: none;
+                cursor: pointer;
+                
+            }
+        }
+
+        &-line {
+            height: 2px;
+            background: $neutralTwo;
+            width: 100%;
+            margin-bottom: 0.4rem;
+            position: relative;
+            transition: all 0.2s ease-in-out;
+
+            &::before , &::after {
+                position: absolute;
+                content: ' ';
+                height: 2px;
+                width: 100%;
+                left: 0;
+                top: 0;
+                background-color: $neutralTwo;
+                transition: all 0.2s ease-in-out;
+            }
+            &::before {
+                top: -0.5rem;
+
+            }
+        
+            &::after {
+                top: 0.5rem;
+
+            }
+        }
+
+        &--open {            
+            background: white;
+            transition: all 0.2s ease-in-out;
+
+            &::before {
+                top: 0rem;
+                transform: rotate(-45deg);
+            
+            }
+        
+            &::after {
+                top: 0rem;
+                transform: rotate(45deg);
+            }
+        }
+
+
+        
+
+
+    }
+
+}
+
+
+@keyframes slideIn {
+
+    from {
+    }
+
+    to {
+        left: 50%;
+    }
+}
+
+
+@keyframes slideOut {
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 200%;
+    }
+}

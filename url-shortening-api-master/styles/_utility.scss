@@ -1,0 +1,37 @@
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    width: 100%;
+}
+
+
+.hover {
+
+    &--neutralFour {
+        transition: color 0.2s ease-in-out;
+        
+        &:hover {
+            color:$neutralFour;
+            transition: color 0.2s ease-in-out;
+        }
+
+        @include tablet {
+
+            &:hover {
+                color: $primaryOne;
+            }
+        }
+    }
+
+
+    &--primaryOneText {
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+            color:hsl(180, 87%, 56%);
+            transition: color 0.2s ease-in-out;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.btn {
+    
+    padding: 0.5em 1.5em;
+    font-weight: bold;
+    border:none;
+    cursor: pointer;
+    &--cyan {
+        background: $primaryOne;
+        color: white;
+
+        transition: background 0.2s ease-in-out;
+        &:hover {
+        background: hsl(180, 87%, 56%);
+        transition: background 0.2s ease-in-out;
+        }
+    }
+
+    &--big {
+        font-size: 1.2rem;
+    }
+
+    &--rounded {
+        border-radius: 0.4rem;
+    }
+
+    &--square {
+        padding: 1rem;
+        &--big {
+            padding: 1.5rem;
+        }
+    }
+    &--pill {
+        border-radius: 3rem;
+    }
+}

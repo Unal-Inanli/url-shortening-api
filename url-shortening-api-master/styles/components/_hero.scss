@@ -1,0 +1,71 @@
+.hero {
+    line-height: 1.2;
+    padding-bottom: 15rem;
+
+    @include tablet {
+        padding-bottom: 5rem;
+    }
+    &__intro{
+        display:flex;
+        flex-flow:column;
+        align-items: flex-start;
+        padding: 5rem 0rem;
+        flex: 1;
+
+        @include tablet {
+            align-items: center;
+        }
+    }
+
+    &__title {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        font-size: 5rem;
+
+        @include tablet {
+            font-size: 3.5rem;
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        margin-top: 0rem;
+        color: $neutralOne;
+        font-size: 1.45rem;
+        font-weight: 500;
+        line-height: 1.5;
+
+        @include tablet {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+   }
+
+   &__cta {
+       padding: 1rem 2rem;
+   }
+
+
+   &__image {
+    position: absolute;
+    width: 1000px;
+    left: 55%;
+    object-fit: fill;
+
+    @include tablet {
+        width: 100%;
+        position: static;
+        object-fit: cover;
+    }
+        &-container {
+            flex:1;
+
+            @include tablet {
+                width: 125%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+   }
+}
