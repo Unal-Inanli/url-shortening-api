@@ -693,7 +693,7 @@ html {
   padding: 4rem;
   background: #3b3054;
   border-radius: 1rem;
-  background-image: url("../images/bg-shorten-desktop.svg");
+  background-image: url("./images/bg-shorten-desktop.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -705,7 +705,7 @@ html {
         -ms-flex-flow: column;
             flex-flow: column;
     padding: 1.5rem;
-    background-image: url("../images/bg-shorten-mobile.svg");
+    background-image: url("./images/bg-shorten-mobile.svg");
     margin-bottom: 1rem;
   }
 }
@@ -1138,15 +1138,17 @@ html {
 
 .boost {
   background-color: #3b3054;
-  background-image: url("../images/bg-boost-desktop.svg");
+  background-image: url("./images/bg-boost-desktop.svg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 4rem;
 }
 
+
 @media (max-width: 768px) {
   .boost {
     text-align: center;
+    background-image: url("./images/bg-boost-mobile.svg");
   }
 }
 
