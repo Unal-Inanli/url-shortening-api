@@ -1,0 +1,51 @@
+.app {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 100%;
+    &__header {
+        display: flex;
+        
+    }
+
+
+    &__hero {
+        display:flex;
+        position: relative;
+
+        @include tablet {
+            flex-flow:column-reverse;
+
+        }
+    }
+
+    &__body {
+        background: #F0F1F7;
+    }
+
+    &__features {
+        display:flex;
+        flex-flow:column;
+        align-items: center;
+    }
+
+    &__boost {
+        display:flex;
+        flex-flow:column;
+        align-items: center;
+    }
+
+    &__footer {
+        padding: 5rem;
+        background: $neutralFour;
+
+        @include tablet {
+            padding: 5rem 0rem;
+        }
+    }
+
+
+    &__attribution {
+        padding: 2rem 0;
+    }
+}

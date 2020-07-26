@@ -1,0 +1,99 @@
+.footer {
+
+    display:flex;
+    flex-flow:row;
+
+    @include tablet {
+        flex-flow:column;
+    }
+
+    &__logo {
+
+        &-container {
+            flex:1;
+            margin-bottom: 3rem;
+        }
+        fill: white;
+    }
+
+    &__links {
+        &-container {
+            display:flex;
+            flex-flow:row;
+            flex:2;
+
+
+            @include phone {
+                flex-flow:column;
+            }
+        }
+
+        &__column {
+            display: flex;
+            flex-flow: column;
+            flex: 1;
+            @include phone {
+                margin-bottom: 1rem;
+            }
+            &__title {
+                color:white;
+                font-weight: bold;
+                margin-bottom: 1.5rem;
+            }
+
+            &__links {
+                display: flex;
+                flex-flow: column;
+            }
+
+            &__item {
+                margin-bottom: 1rem;
+            }
+
+            &__link {
+
+                transition: color 0.2s ease-in-out;
+                &:hover {
+                color: $primaryOne;
+                transition: color 0.2s ease-in-out;
+
+                }
+            }
+        }
+
+    }
+
+
+    &__socials {
+
+        &-container {
+            align-self: start;
+            display:flex;
+            flex-flow:row;
+            justify-content: space-between;
+            align-items: center;
+            flex:0.5;
+        }
+
+        &-link {
+        
+            @include tablet {
+                margin-right: 1rem;
+            }
+            &:hover {
+             
+                .footer__socials-icon {
+
+                    fill: $primaryOne;
+                    transition: fill 0.2s ease-in-out;
+                }
+
+            }
+        }
+    
+        &-icon {
+            transition: fill 0.2s ease-in-out;
+
+        }
+    }
+}

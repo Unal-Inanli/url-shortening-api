@@ -1,0 +1,176 @@
+
+.link-shortener {
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+    background: $primaryTwo;
+    border-radius: 1rem;
+    background-image: url('../images/bg-shorten-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include tablet {
+        flex-flow:column;
+        padding: 1.5rem;
+        background-image: url('../images/bg-shorten-mobile.svg');
+        margin-bottom: 1rem;
+    }
+    &__input {
+        display: flex;
+        flex-flow: column;
+        position: relative;
+        width: 80%;
+
+            
+        @include tablet {
+            width: 100%;
+            flex-flow: column-reverse;
+        }
+        
+        &--danger {
+            border: 2px $secondaryOne solid !important;
+            color: $secondaryOne;
+        }
+
+        input {
+            padding: 1rem 2rem; 
+            font-weight: bold;
+            border-radius: 0.4rem;
+            border:none;
+            font-size: 1.3rem;
+        
+            @include tablet {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+    }
+
+    &__error {
+        position: absolute;
+        color: $secondaryOne;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        bottom: -2rem;
+        display: none;
+
+        @include tablet {
+            bottom: 125%;
+            background: white;
+            padding: 1rem 3rem;
+            border-radius: 0.4rem;
+            box-shadow: 0px 0px 5px 1px $neutralTwo;
+            z-index: 3;
+            
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 32px;
+                height: 32px;
+                background: white;
+                transform: rotate(45deg);
+                bottom: 0;
+                z-index: -1;
+                
+            }
+        }
+
+        &--active {
+            display: unset;
+        }
+    }
+
+
+    &__submit {
+        
+        padding: 1rem 2rem;
+
+        @include tablet {
+            width: 100%;
+            margin-top:1rem;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+
+        }
+        &-container {
+            @include tablet {
+                width: 100%;
+            }
+            width: 20%;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+        }
+    }
+    &__container {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+    }
+
+
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+    }
+
+    &__link {
+        &__name {
+            font-size: 1.2rem;
+
+            @include tablet {
+                flex-flow:column;
+                border-bottom: 1px $neutralOne solid;
+                font-size: 0.9rem;
+                align-items: flex-start;
+                width: 100%;
+                padding: 0rem 1rem;
+                padding-bottom: 0.5rem;
+            }
+        }
+
+        &__results {
+            font-size: 1.2rem;
+
+            @include tablet {
+                font-size: 0.9rem;
+                padding: 0rem 1rem;
+                padding-top: 0.5rem;
+                display:flex;
+                flex-flow: column;
+                width: 100%;
+            }
+        }
+
+        &__copy-btn {
+            padding: 0.5rem;
+            font-size:0.9rem;
+        }
+
+        &__short {
+            margin-right: 2rem;
+            color: $primaryOne;
+            margin-bottom: 0.5rem;
+        }
+        &__container {
+            justify-content: space-between;
+            display:flex;
+            align-items: center;
+            background: white;
+            border-radius: 0.4rem;
+            margin-bottom: 1rem;
+            padding: 1rem 2rem;
+            transform: translateY(-50%);
+
+            @include tablet {
+                flex-flow:column;
+                padding: 1rem 0rem;
+            }
+        }
+    }
+}
